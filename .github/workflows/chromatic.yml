@@ -5,7 +5,7 @@ name: 'Chromatic'
 
 # Event for the workflow
 on:  
-  push:
+  # push:
   pull_request:
     branches:
       - main
@@ -27,4 +27,4 @@ jobs:
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          # exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing
+          exitZeroOnChanges: true # 👈 Option to prevent the workflow from failing
